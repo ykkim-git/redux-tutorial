@@ -97,5 +97,3 @@ add.addEventListener("click", handleAdd);
 minus.addEventListener("click", handleMinus);
 
 ```
-
-
