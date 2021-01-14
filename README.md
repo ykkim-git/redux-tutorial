@@ -97,3 +97,8 @@ add.addEventListener("click", handleAdd);
 minus.addEventListener("click", handleMinus);
 
 ```
+
+___
+
+## REACT TODO APP 만들기
+> yarn add react-redux react-router-dom
