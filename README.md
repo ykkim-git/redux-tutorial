@@ -100,5 +100,26 @@ minus.addEventListener("click", handleMinus);
 
 ___
 
-## REACT TODO APP 만들기
-> yarn add react-redux react-router-dom
+## Redux-toolkit
+
+> yarn add @reduxjs/toolkit
+
+### createAction
+
+```js
+import { createAction } from "@reduxjs/toolkit";
+
+const addToDo = createAction("ADD");
+const deleteToDo = createAction("DELETE");
+
+const reducer = (state = [], action) => {
+  switch (action.type) {
+    case addToDo.type:
+      return [{ text: action.payload, id: Date.now() }, ...state];
+    case deleteToDo.type:
+      return state.filter((toDo) => toDo.id !== action.payload);
+    default:
+      return state;
+  }
+};
+```
